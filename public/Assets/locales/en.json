@@ -1,28 +1,28 @@
 {
     "trustedFriends": {
         "pendingConnection": "Pending Trusted Friend",
-        "pendingRequest": "Trusted Friend Request Pending",
+        "pendingRequest": "Trusted Friend Request pending",
         "addConnection": "Add Trusted Friend",
-        "addConfirmation": "Are you sure you want to send a trusted Friend request?",
-        "sendRequest": "Send Request",
+        "addConfirmation": "Are you sure you want to send a Trusted Friend request?",
+        "sendRequest": "Send request",
         "sending": "Sending...",
         "requestSent": "Trusted Friend request sent!",
-        "requestFailed": "Failed to send trusted Friend request.",
+        "requestFailed": "Failed to send Trusted Friend request.",
         "errorSending": "Error Sending",
         "acceptConnection": "Accept Trusted Friend",
-        "acceptConfirmation": "Are you sure you want to accept this trusted Friend request?",
+        "acceptConfirmation": "Are you sure you want to accept this Trusted Friend request?",
         "accept": "Accept",
         "accepting": "Accepting...",
         "requestAccepted": "Trusted Friend request accepted!",
         "acceptFailed": "Failed to accept trusted Friend request.",
-        "errorAccepting": "Error Accepting",
+        "errorAccepting": "Error accepting",
         "removeConnection": "Remove Trusted Friend",
-        "removeConfirmation": "Are you sure you want to remove this trusted Friend?",
+        "removeConfirmation": "Are you sure you want to remove this Trusted Friend?",
         "remove": "Remove",
         "removing": "Removing...",
         "connectionRemoved": "Trusted Friend removed!",
-        "removeFailed": "Failed to remove trusted Friend.",
-        "errorRemoving": "Error Removing"
+        "removeFailed": "Failed to remove Trusted Friend.",
+        "errorRemoving": "Error removing"
     },
     "categorizeWearing": {
         "currentlyWearing": "Currently Wearing",
@@ -96,14 +96,14 @@
     "donationLink": {
         "donate": "Donate",
         "overlayTitle": "Pls Donate",
-        "description": "This will launch \"PLS DONATE\" where you can give an offline donation.\n\nDue to fees from Roblox (30%) and the game (10%), the user receives 60% of the donated amount.\n\nUpon joining, the \"Offline Donations\" UI will appear with their username pre-filled. Simply click the gift button to open their stand and purchase a gamepass to donate.",
+        "description": "This will launch \"PLS DONATE\" where you can give an offline donation.\n\nDue to fees from Roblox (30%) and the game (10%), the user receives 60% of the donated amount.\n\nUpon joining, the \"Offline Donations\" UI will appear with their username pre-filled. Click the gift button to open their stand and purchase a gamepass to donate.",
         "joinButton": "Join Pls Donate",
-        "goBackButton": "Go Back"
+        "goBackButton": "Back"
     },
     "instantJoiner": {
         "instantJoin": "Instant Join",
         "stopJoining": "Stop Joining",
-        "description": "This will automatically attempts to join the user as soon as they get into an experience.<br><br>This requires the user to have their joins enabled for everyone or for you to be friends with them.",
+        "description": "This will automatically attempt to join the user as soon as they get into an experience.<br><br>This requires the user to have their joins enabled for everyone or for you to be friends with them.",
         "searchPlaceholder": "Search for an experience or enter a Place ID (Optional)",
         "continue": "Continue",
         "cancel": "Cancel",
@@ -248,12 +248,12 @@
             "title": "RoValra Information!",
             "desc1": "RoValra is an extension that's trying to make basic quality of life features free and accessible to everyone, by making everything completely open-source.",
             "desc2": "This is possible by running almost everything locally.",
-            "desc3": "And the server side features doesn't cost me anything to run which is why I can afford to make this free.",
-            "desc4": "This extension is also a project to learn, so a lot of stuff might change or get reworked overtime as I learn more.",
+            "desc3": "And the server-side features don't cost me anything to run, which is why I can afford to make this free.",
+            "desc4": "This extension is also a project to learn, so a lot of stuff might change or get reworked over time as I learn more.",
             "gilbert": "WE ALL LOVE GILBERT",
-            "suggestions": "If you have any feature suggestions please let me know in my Discord server or via GitHub",
-            "bugs": "If you find any bugs let me know in my Discord server or via GitHub",
-            "review": "If you like this extension please consider <a href=\"https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli/reviews\" target=\"_blank\" class=\"rovalra-review-link\">leaving a review</a>, it helps a lot ❤️",
+            "suggestions": "If you have any feature suggestions, please let me know in my Discord server or via GitHub",
+            "bugs": "If you find any bugs, let me know in my Discord server or via GitHub",
+            "review": "If you like this extension, please consider <a href=\"https://chromewebstore.google.com/detail/rovalra-roblox-improved/njcickgebhnpgmoodjdgohkclfplejli/reviews\" target=\"_blank\" class=\"rovalra-review-link\">leaving a review</a>, it helps a lot ❤️",
             "discord": "Discord Server",
             "github": "Github Repo",
             "support": "Support RoValra",
@@ -268,7 +268,7 @@
             "aspect": "Thanks to <b style=\"font-weight: bold;\">Aspect</b> for helping me out here and there when I had a bunch of dumb questions or problems.",
             "l5se": "Thanks to <b style=\"font-weight: bold;\">l5se</b> for allowing me to use their open source region selector as a template for my extension.",
             "lz": "Thanks to <b style=\"font-weight: bold;\">7_lz</b> for helping me a bunch when preparing for the Chrome Web Store release. They helped a ton and I'm very thankful.",
-            "mmfw": "Thanks to <b style=\"font-weight: bold;\">mmfw</b> for making the screenshots on the chrome web store, and general help with UI design of the extension.",
+            "mmfw": "Thanks to <b style=\"font-weight: bold;\">mmfw</b> for making the screenshots on the Chrome Web Store, and general help with UI design of the extension.",
             "coweggs": "Thanks to <b style=\"font-weight: bold;\">Coweggs</b> for coming up with the very funny name that is \"RoValra\" as a joke that I then ended up using.",
             "woozynate": "Thanks to <b style=\"font-weight: bold;\">WoozyNate</b> for making the amazing game called fisch, which is where Gilbert (the logo) is from <3",
             "contributorsTitle": "Contributors",
@@ -279,7 +279,7 @@
             "title": "Donator Perks!",
             "subtitle": "Support RoValra's development and get exclusive perks!",
             "howToGet": "How to Get Perks",
-            "howToGetDesc": "You can donate by purchasing a gamepasses in the support game.",
+            "howToGetDesc": "You can donate by purchasing a gamepass in the support game.",
             "goToGame": "Go to Donation Game",
             "perkTiers": "Perk Tiers",
             "tier1": "Tier 1: Supporter",
@@ -295,7 +295,7 @@
             "previousRewards": "+ All previous tier rewards",
             "moreComingSoon": "More coming soon.",
             "availableBadges": "Available Badges",
-            "note": "Note:\n- Badges may take a few minutes to appear after donation.\n- To manage badge visibility, go to the 'Profile' settings tab. \n- Donating through commissions sadly won't give a donator perks, this is a Roblox limitation.\n- When donating you agree to [RoValra's Terms of Use](https://www.rovalra.com/tou/)"
+            "note": "Note:\n- Badges may take a few minutes to appear after donation.\n- To manage badge visibility, go to the 'Profile' settings tab. \n- Donating through commissions sadly won't give a donor perks; this is a Roblox limitation.\n- By donating, you agree to [RoValra's Terms of Use](https://www.rovalra.com/tou/)"
         },
         "search": {
             "minLength": "Please enter at least 2 characters to search.",
@@ -345,7 +345,7 @@
         "playing": "Playing {{gameName}}",
         "verifiedBadge": "Verified Badge",
         "verified": "Verified",
-        "permanentlyBanned": "This user is terminated or deactived their account.",
+        "permanentlyBanned": "This user was terminated, or they deactivated their account.",
         "joinPreferredRegion": "Join Preferred Region",
         "bestRegionAuto": "Best Region (Auto)",
         "searchHistory": "Search History",
@@ -426,7 +426,7 @@
         "loadErrorApi": "Failed to load servers from RoValra API.",
         "join": "Join",
         "peopleMax": "{{playing}} of {{maxPlayers}} people max",
-        "playerCountUnknownTooltip": "Player count is unknown, this is a Roblox limitation. The thumbnails are not representative of the people in game.",
+        "playerCountUnknownTooltip": "Player count is unknown; this is a Roblox limitation. The thumbnails are not representative of the people in-game.",
         "playerCountUnknownLabel": "Player count unknown"
     },
     "recentServers": {
@@ -455,7 +455,7 @@
         "success": "Successfully equipped outfit."
     },
     "botDetector": {
-        "tooltip": "Bots are accounts running automated scripts to farm items. A single user can sometimes run 50+ bots. Keep in mind that this is not a fault of the game developers. This information can be inaccurate if an experience is mainly played by new Roblox accounts.",
+        "tooltip": "Bots are accounts running automated scripts to farm items. A single user can sometimes run 50+ bots. Keep in mind that this is not the game developers' fault. This information can be inaccurate if a game is mainly played by new Roblox accounts.",
         "lotsOfBots": "<span style=\"color: var(--rovalra-main-text-color)\">{{gameName}}</span> has a lot of bots",
         "someBots": "<span style=\"color: var(--rovalra-main-text-color)\">{{gameName}}</span> has some bots but mostly real players",
         "thisGame": "This game"
@@ -661,7 +661,7 @@
             "supported": "Supported",
             "unsupported": "Unsupported"
         },
-        "reportAbuse": "Report Abuse",
+        "reportAbuse": "Report abuse",
         "badges": {
             "title": "Badges",
             "noBadges": "No badges yet",
@@ -682,7 +682,7 @@
             "buy": "Buy"
         },
         "disabled": "View Private / Moderated Games is Disabled",
-        "disabledDescription": "To view private and moderated games you need to enable the setting here:",
+        "disabledDescription": "To view private and moderated games, you need to enable the setting here:",
         "disabledLinkText": "View Private / Moderated Games",
         "products": {
             "title": "Products",
@@ -717,7 +717,7 @@
         "23": "This experience is unrated",
         "24": "This experience is age-gated by content descriptor",
         "25": "This experience has been moderated for having an inaccurate maturity rating.",
-        "unknown": "This experience is unavailable"
+        "unknown": "This experience is unavailable."
     },
     "bannedUsers": {
         "connections": "Friends",
@@ -769,7 +769,7 @@
     },
     "profile": {
         "currencyTransfer": "Send Robux",
-        "currencyTransferConfirmation": "This will open the Roblox client allowing you to send robux.",
+        "currencyTransferConfirmation": "This will open the Roblox client, allowing you to send Robux.",
         "openClient": "Open Client"
     },
     "plusPrivateServerTooltip": {
@@ -792,6 +792,6 @@
             "newest": "Newest",
             "oldest": "Oldest"
         },
-        "tooltip": "Sort by when the user joined the community"
+        "tooltip": "Sort by when the user joined this community"
     }
 }
