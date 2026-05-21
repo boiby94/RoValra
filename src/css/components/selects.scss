@@ -48,14 +48,12 @@
 }
 
 .rovalra-dropdown-section-header {
-    padding: 8px 12px 4px 12px;
+    padding-block: 8px 4px;
+    padding-inline: 12px;
     font-size: 12px;
     font-weight: 700;
-    text-transform: uppercase;
     color: var(--rovalra-secondary-text-color);
-    opacity: 0.6;
-    letter-spacing: 0.5px;
-    margin-top: 4px;
+    margin-top: 5px;
 
     &:first-child {
         margin-top: 0;
