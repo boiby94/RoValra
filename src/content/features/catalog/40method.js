@@ -11,6 +11,7 @@ import { createOverlay } from '../../core/ui/overlay.js';
 import { createDropdown } from '../../core/ui/dropdown.js';
 import { createSpinner } from '../../core/ui/spinner.js';
 import { createStyledInput } from '../../core/ui/catalog/input.js';
+import { createFoundationButton } from '../../core/ui/foundationButton.js';
 
 import { fetchThumbnails } from '../../core/thumbnail/thumbnails.js';
 import DOMPurify from 'dompurify';
@@ -643,16 +644,13 @@ export const createAndShowPopup = (onSave, initialState = null) => {
         },
     );
 
-    const saveBtn = document.createElement('button');
-    saveBtn.textContent = 'Save & Continue';
-    saveBtn.className = 'btn-cta-md btn-min-width';
-    saveBtn.id = 'sr-save-btn';
+    const saveBtn = createFoundationButton({ content: 'Save & continue', id: 'sr-save-btn', colorVariant: 'emphasis' });
 
     const { overlay, close } = createOverlay({
-        title: 'Set Up Your Game',
+        title: 'Set up your game',
         bodyContent: bodyContent,
         actions: [saveBtn],
-        maxWidth: '500px',
+        maxWidth: '480px',
         showLogo: true,
     });
 
@@ -1449,26 +1447,24 @@ const showInitialConfirmation = async (savedPlaceId, useRoValraGroup) => {
             </div>
         </div>
         <div style="padding: 12px 0; margin-bottom: 16px; border-bottom: 1px solid rgb(73, 77, 90);">
-            <div class="text font-body" style="font-weight: 600; margin-bottom: 8px;">HOW THIS WORKS</div>
+            <div class="text font-body" style="font-weight: 600; margin-bottom: 8px;">How this works:</div>
             <ol class="text font-body" style="margin: 0; padding-left: 20px;">
                 <li>Roblox will launch and join the server automatically</li>
-                <li>Once you're in-game, the purchase prompt will show and you just buy the item using that.</li>
-                <li>The item goes to you, ${useRoValraGroup || savedPlaceId === 'ROVALRA_GROUP' ? 'and RoValra will earn a commission on your purchase which will help support the extension, at no extra cost for you.' : 'but 40% of the Robux goes to your group'}</li>
+                <li>Once you're in-game, you'll be able to buy the item using the purchase prompt.</li>
+                <li>The item goes to you, ${useRoValraGroup || savedPlaceId === 'ROVALRA_GROUP' ? 'and RoValra will earn a commission on your purchase. This helps support the extension at no extra cost for you.' : '40% of the Robux goes to your group.'}</li>
                 ${useRoValraGroup || savedPlaceId === 'ROVALRA_GROUP' ? '' : '<li>Robux will be pending for ~1 month</li>'}
             </ol>
         </div>
         
     `);
 
-    const confirmBtn = document.createElement('button');
-    confirmBtn.textContent = 'Got It';
-    confirmBtn.className = 'btn-cta-md btn-min-width';
+    const confirmBtn = createFoundationButton({ content: 'Got It', colorVariant: 'emphasis' });
 
     const { overlay: confirmOverlay, close: closeConfirm } = createOverlay({
-        title: 'Confirm 40% Method Purchase',
+        title: 'Confirm 40% method purchase',
         bodyContent: confirmBody,
         actions: [confirmBtn],
-        maxWidth: '500px',
+        maxWidth: '480px',
         showLogo: true,
     });
 
@@ -1798,21 +1794,15 @@ const executeCartPurchase = async (
         ${robuxAfterPurchase < 0 ? '<div style="padding: 8px; border-radius: 4px; background: rgba(211, 47, 47, 0.1); margin-bottom: 8px; border: 1px solid rgba(211, 47, 47, 0.3);"><span class="text font-body" style="color: #d32f2f; font-weight: 600; font-size: 13px;">⚠️ Insufficient Balance</span></div>' : ''}
     `);
 
-    const finalConfirmBtn = document.createElement('button');
-    finalConfirmBtn.textContent = 'Confirm Cart Purchase';
-    finalConfirmBtn.className = 'btn-cta-md btn-min-width';
-    finalConfirmBtn.disabled = robuxAfterPurchase < 0;
-
-    const finalCancelBtn = document.createElement('button');
-    finalCancelBtn.textContent = 'Cancel';
-    finalCancelBtn.className = 'btn-secondary-md btn-min-width';
+    const finalConfirmBtn = createFoundationButton({ content: 'Confirm cart purchase', colorVariant: 'emphasis', disabled: robuxAfterPurchase < 0 });
+    const finalCancelBtn = createFoundationButton({ content: 'Cancel' });
 
     const { overlay: finalConfirmOverlay, close: origCloseFinalConfirm } =
         createOverlay({
-            title: 'Confirm Cart Purchase',
+            title: 'Confirm cart purchase',
             bodyContent: finalConfirmBody,
             actions: [finalCancelBtn, finalConfirmBtn],
-            maxWidth: '500px',
+            maxWidth: '480px',
             showLogo: true,
         });
 
@@ -2020,7 +2010,7 @@ const execute40MethodPurchase = async (
             const info = await prefetchData.gameInfo;
             if (info && info.data && info.data.length > 0) {
                 universeId = info.data[0].universeId;
-                gameName = info.data[0].name || 'Unknown Experience';
+                gameName = info.data[0].name || 'Unknown game';
             }
             if (prefetchData.gameThumb) {
                 gameThumbnailUrl = (await prefetchData.gameThumb) || '';
@@ -2037,7 +2027,7 @@ const execute40MethodPurchase = async (
             });
 
             if (gameData && gameData.length > 0) {
-                gameName = gameData[0].name || 'Unknown Experience';
+                gameName = gameData[0].name || 'Unknown game';
                 universeId = gameData[0].universeId;
 
                 if (universeId) {
@@ -2200,7 +2190,7 @@ const execute40MethodPurchase = async (
             </div>
             <details style="border-bottom: 1px solid rgb(73, 77, 90); padding: 8px 0;">
                 <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between;">
-                    <span class="text font-body" style="font-weight: 600; font-size: 13px;">USING EXPERIENCE</span>
+                    <span class="text font-body" style="font-weight: 600; font-size: 13px;">Using experience</span>
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <button id="change-experience-btn" class="btn-secondary-sm text font-body" style="padding: 4px 10px; font-size: 12px;" onclick="event.stopPropagation();">
                             Change
@@ -2220,8 +2210,8 @@ const execute40MethodPurchase = async (
                     }
                     <div style="flex: 1; min-width: 0;">
                         <div class="text font-body" style="font-weight: 600; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${gameName}</div>
-                        <div class="text font-body" style="font-size: 11px; opacity: 0.7;">Place ID: ${actualPlaceId}</div>
-                        ${isDonating ? '<div class="text font-body" style="font-size: 11px; opacity: 0.7;">Donating to RoValra ❤️</div>' : ''}
+                        <div class="text font-body" style="font-size: 11px;">Place ID: ${actualPlaceId}</div>
+                        ${isDonating ? '<div class="text font-body" style="font-size: 11px;">Donating to RoValra ❤️</div>' : ''}
                     </div>
                 </div>
             </details>
@@ -2726,48 +2716,28 @@ const addSaveButton = (modal) => {
 
             savings = Math.floor(robuxPrice * savingsPercentage);
         }
-        const saveButton = document.createElement('button');
-        saveButton.type = 'button';
-
         const isGamePassWarningActive = isGamePass && isGamePassBeforeDisable();
-
-        const creatorName = itemData?.creatorName
-            ? ` (${itemData.creatorName})`
-            : '';
+        const isUnified = modalWindow.classList.contains('unified-purchase-dialog-content');
+        
+        const creatorName = itemData?.creatorName ? ` (${itemData.creatorName})` : '';
         const warningHtml = isRestricted
             ? `<span style="font-size: 10px; color: #d32f2f; display: block; line-height: 1.2; margin-top: 2px; font-weight: 500;">The creator of this Item${creatorName} may have disabled buying in experiences</span>`
             : isGamePassWarningActive
               ? `<span style="font-size: 10px; color: #ffa500; display: block; line-height: 1.2; margin-top: 2px; font-weight: 500;">⚠️ On May 29, saving 10% on gamepasses will be disabled by Roblox.</span>`
               : '';
-
-        const isUnified = modalWindow.classList.contains(
-            'unified-purchase-dialog-content',
-        );
-
-        if (isUnified) {
-            saveButton.className =
-                'foundation-web-button relative clip group/interactable focus-visible:outline-focus disabled:outline-none cursor-pointer flex items-center justify-center stroke-none padding-y-none select-none radius-medium text-label-large height-1200 padding-x-large bg-action-emphasis content-action-emphasis fill basis-0 btn-save-robux';
-            saveButton.style.height = '48px';
-            saveButton.style.textDecoration = 'none';
-            saveButton.style.backgroundColor =
-                'var(--rovalra-button-background-color)';
-            saveButton.innerHTML = DOMPurify.sanitize(`
-                <div role="presentation" class="absolute inset-[0] transition-colors group-hover/interactable:bg-[var(--color-state-hover)] group-active/interactable:bg-[var(--color-state-press)] group-disabled/interactable:bg-none"></div>
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; padding: 4px 0;">
-                    <span class="text-truncate-end text-no-wrap" style="color: var(--rovalra-main-text-color)">Save ${savings} Robux</span>
-                    ${warningHtml}
-                </div>
-            `);
-        } else {
-            saveButton.className =
-                'modal-button btn-control-md btn-min-width btn-save-robux';
-            saveButton.innerHTML = DOMPurify.sanitize(`
-                <span style="display: flex; flex-direction: column; align-items: center;">
-                    <span>Save ${savings} Robux</span>
-                    ${warningHtml ? `<span style="font-size: 9px; opacity: 0.8; line-height: 1;"></span>` : ''}
-                </span>
-            `);
-        }
+        
+        const labelEl = document.createElement('div');
+        labelEl.style.cssText = 'display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;text-align:center;';
+        labelEl.innerHTML = DOMPurify.sanitize(`<span class="text-truncate-end text-no-wrap">Save ${savings} Robux</span>${warningHtml}`);
+        
+        const saveButton = createFoundationButton({
+            content: labelEl,
+            colorVariant: isRestricted ? 'standard' : 'emphasis',
+            sizeVariant: isUnified ? 'large' : 'standard',
+            width: '100%',
+            backgroundColor: isUnified ? 'var(--rovalra-button-background-color)' : '',
+        });
+        saveButton.classList.add('btn-save-robux');
 
         saveButton.addEventListener('click', async () => {
             if (closeButton) closeButton.click();
@@ -2777,13 +2747,13 @@ const addSaveButton = (modal) => {
                 errorBody.innerHTML = DOMPurify.sanitize(`
                     <div style="padding: 20px; text-align: center;">
                         <div style="font-size: 48px; margin-bottom: 16px; color: #d32f2f;">⚠️</div>
-                        <h3 class="text font-header-2" style="margin: 0 0 12px 0; color: #d32f2f;">Cart Mismatch Detected</h3>
-                        <p class="text font-body" style="margin: 0 0 12px 0;">The items in your purchase modal don't match what's in your cart.</p>
+                        <h3 class="text font-header-2" style="margin: 0 0 12px 0; color: #d32f2f;">Cart mismatch</h3>
+                        <p class="text font-body" style="margin: 0 0 12px 0;">The items you've selected don't match what's in your cart.</p>
                         <p class="text font-body" style="margin: 0;">Please refresh the page and try again. If this issue persists, please report it in the RoValra Discord server.</p>
                     </div>
                 `);
                 const { overlay, close } = createOverlay({
-                    title: 'Purchase Error',
+                    title: 'Purchase error',
                     bodyContent: errorBody,
                     actions: [],
                     maxWidth: '450px',
